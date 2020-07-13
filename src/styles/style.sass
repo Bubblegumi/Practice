@@ -11,5 +11,490 @@ $baseSizeLg: 20
 
 //Font sizes
 
+h1
+    +fs(65)
+    letter-spacing: 0.1em
+    text-transform: capitalize
+    text-align: center
+    font-weight: bold
+h2
+    +fs(60)
+    font-weight: bold
+h3
+    +fs(30)
+    font-weight: 300
+h4
+    +fs(20)
+h5
+    +fs(14)
+h6
+    +fs(10)
+
+p 
+    +fs(16)
+    font-weight: 500
 //Colors
+
+$accent: #34C759
+$dark-grey: #252525
+$grey: #737373
+
+body 
+    font-size: 16px
+    color: white
+    font-family: 'Montserrat', sans-serif
+    background-color: #191919
+
+a 
+    text-decoration: none!important
+
+.btn
+    width: 220px
+    height: 72px
+    border-radius: 43px
+    background: $accent
+    font-size: 18px
+    font-weight: 800
+    text-transform: uppercase
+    &-small
+        width: 100px
+        height: 40px
+        font-size: 14px
+        &-ghost
+            background-color: transparent
+            color: $grey
+            border: 1px solid $grey
+    &:hover
+        border: 1px solid white
+
+//Main screen
+.main-screen
+    min-height: 100vh
+    background: url('../img/main-bg.png') center top / cover
+    padding-bottom: 50px
+
+.nav
+    padding-top: 35px
+    padding-bottom: 35px
+    border-bottom: 1px solid $grey
+    .menu
+        &-item
+
+        &-link 
+            color: white  
+            font-weight: bold
+            &:hover
+                color: $accent
+
+.offer
+    padding-top: 80px
+    padding-bottom: 70px
+    & h1 
+        max-width: 1100px
+        font-weight: 500
+        line-height: 87px
+        padding-bottom: 17px
+    p 
+        opacity: 0.7
+        letter-spacing: -0.2px
+        line-height: 162%
+        padding-bottom: 30px
+
+.desc-wrap
+    & h5 
+        opacity: 0.5
+    & .text-wrap
+        padding: 17px 0px 15px 0px
+
+//Second
+
+.gallery
+    padding-top: 105px
+    & .header-wrap
+        padding-bottom: 70px
+        &:before
+            position: absolute
+            content: 'About'
+            bottom: 80%
+            left: 50%
+            transform: translateY(-50%)
+            transform: translateX(-50%)
+            
+            font-weight: 900
+            font-size: 100px
+            opacity: 0.1
+            letter-spacing: 0.2em
+            text-transform: uppercase
+    & p 
+        line-height: 187%
+        color: $grey
+        padding-bottom: 90px
+
+.slider
+    width: 100%
+    padding-bottom: 90px
+    & .switcher 
+        width: 10%
+        height: 50px
+        border-radius: 50%
+        border: 1px solid $grey
+        background: transparent
+        &-l 
+            margin-right: 60px
+        &-r 
+            margin-left: 60px
+    
+.description
+    padding-top: 100px
+    
+    & .wrapper
+        padding-bottom: 100px
+    & .header-style
+       
+        &:before
+            position: absolute
+            content: 'About'
+            bottom: 50%
+            left: 50%
+            transform: translateY(-50%)
+            transform: translateX(-50%)
+            font-weight: 900
+            font-size: 100px
+            opacity: 0.1
+            letter-spacing: 0.2em
+            text-transform: uppercase
+        &:after
+            content: ''
+            width: 60px
+            height: 2px
+            background-color: $accent
+            position: absolute
+            bottom: 40%
+            left: 50%
+            transform: translateY(-50%)
+            transform: translateX(-50%)
+
+.wrap 
+    background-color: $dark-grey
+    max-width: 100%
+    padding: 24px 25px 0px 24px
+    border-radius: 6px
+    box-sizing: border-box
+    &:hover
+        background-color: $accent
+    h6 
+        line-height: 138%
+        padding-bottom: 40px
+
+    h5 
+        position: relative
+        padding-bottom: 36px
+        &:after
+            content: ''
+            width: 60px
+            height: 2px
+            background-color: $accent
+            position: absolute
+            top: 60%
+            left: 0%
+
+// Dishes 
+
+.dishes 
+    padding-top: 110px
+
+    & .header-style
+
+        &:before
+            position: absolute
+            content: 'About'
+            top: -60%
+            left: 50%
+            transform: translateY(-50%)
+            transform: translateX(-50%)
+            font-weight: 900
+            font-size: 100px
+            opacity: 0.1
+            letter-spacing: 0.2em
+            text-transform: uppercase
+        &:after
+            content: ''
+            width: 60px
+            height: 2px
+            background-color: $accent
+            position: absolute
+            bottom: -70%
+            left: 50%
+            transform: translateY(-50%)
+            transform: translateX(-50%)
+
+.dishes
+    padding-top: 110px
+
+.card-body
+    padding-top: 40px
+    max-width: 100%
+    position: relative
+    &__item
+        background-color: $dark-grey
+        padding: 29px 30px 0px 30px
+        width: 100%
+        h6 
+            font-weight: 300
+            font-size: 14px
+            padding-bottom: 25px
+
+        h5 
+            font-weight: 300
+            font-size: 13px
+            opacity: 0.8
+            line-height: 138%
+            letter-spacing: -0.1625px
+            padding-bottom: 24px
+
+    & .info
+        padding-bottom: 24px
+        p 
+            font-size: 13px
+            padding-right: 40px
+        & .stars 
+            padding-right: 7px
+            & .star
+                margin-left: 5px
+                width: 20px
+                height: 19px
+                &-f    
+                    background:url('../img/star-f.png')
+                &-h
+                    background:url('../img/star-h.png')
+                &-e 
+                    background:url('../img/star-e.png')
+    
+    & .arrow-norm 
+        width: 15%
+        height: 50px
+        border: 2px solid $grey
+        border-radius: 50%
+        position: absolute
+        background-color:  $dark-grey
+        bottom: 80%
+        right: 5%
+
+// Chefs 
+
+.chefs
+    padding-top: 120px
+
+    & .wrapper
+    padding-bottom: 70px
+
+    & .header-style
+
+            &:before
+                position: absolute
+                content: 'Chefs'
+                bottom: -40%
+                left: 50%
+                transform: translateY(-50%)
+                transform: translateX(-50%)
+                font-weight: 900
+                font-size: 100px
+                opacity: 0.1
+                letter-spacing: 0.2em
+                text-transform: uppercase
+            &:after
+                content: ''
+                width: 60px
+                height: 2px
+                background-color: $accent
+                position: absolute
+                bottom: -60%
+                left: 50%
+                transform: translateY(-50%)
+                transform: translateX(-50%)
+
+.avatars
+    padding-top: 60px
+    padding-bottom: 24px
+    & .profile-text 
+        padding-left: 30px
+        h6 
+            padding-top: 5px
+            color: $grey
+
+// Recepiec 
+
+.recepies
+    padding-top: 120px
+
+    & .wrapper
+        margin-bottom: 80px
+    & .header-style
+
+            &:before
+                position: absolute
+                content: 'Chefs'
+                bottom: -40%
+                left: 50%
+                transform: translateY(-50%)
+                transform: translateX(-50%)
+                font-weight: 900
+                font-size: 100px
+                opacity: 0.1
+                letter-spacing: 0.2em
+                text-transform: uppercase
+            &:after
+                content: ''
+                width: 60px
+                height: 2px
+                background-color: $accent
+                position: absolute
+                bottom: -60%
+                left: 50%
+                transform: translateY(-50%)
+                transform: translateX(-50%)
+
+.recepies-main
+    position: relative
+
+.recepies-desc
+    position: absolute
+    top: 10%
+    left: 50%
+    transform: translateY(-50%)
+    transform: translateX(-50%)
+    width: 100%
+    & .switcher 
+        width: 40px
+        height: 40px
+        background-color: #404a615e
+        border-radius: 50%
+        position: absolute
+        right: 10%
+        border: 1px solid $grey
+    & .card 
+        width: 90px
+        height: 25px
+        background: #404a6138
+        left: 45%
+    & .icon-wrap
+        margin-right: 10px
+    
+    h4 
+        line-height: 167%
+
+
+        p 
+            font-size: 12px
+    p 
+        padding-top: 60px
+        padding-bottom: 25px
+
+.card 
+    width: 90px
+    height: 25px
+    background: #1A1A1A
+    font-size: 8px
+    font-weight: 900
+    &-color
+        background-color: black
+    h5 
+        font-size: 14px
+
+.proposition
+    height: 150px
+    background-color: $dark-grey
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+    border-radius: 6px
+    padding: 30px 26px 0px 30px
+    margin-bottom: 30px
+    &-bg 
+        background-color: $accent
+    &-photo
+        background: url('../img/recepies-sm.png')
+    & .proposition-desc
+        padding-top: 7px
+    p 
+        font-size: 16px
+        line-height: 187%
+
+    h6 
+        padding-left: 10px
+
+        
+    
+    & .icon-propos
+        padding-left: 24px
+
+
+// <!-- guns catalogue start -->
+
+.wrapper 
+    height: 250px
+.jeka-catalog
+    position: relative
+    padding-top: 60px
+
+.header
+    padding-top: 40px
+    opacity: 0.9
+
+    &:before
+        position: absolute
+        content: 'Goose?'
+        left: 50%
+        top: 10px
+        transform: translateY(-50%)
+        transform: translateX(-50%)
+        font-weight: 900
+        font-size: 100px
+        opacity: 0.1
+        letter-spacing: 0.2em
+        text-transform: uppercase
+
+.catalog
+    padding-top: 80px
+
+    &-item
+        
+        &__title
+            display: none
+            font-size: 14px
+
+        &__preview
+            width: 71px
+            height: 71px
+            border: 3px solid $accent
+            border-radius: 8px
+
+        &:hover
+            +screen-up(lg)
+                transform: scale(2)
+                transition: 0.5s all ease
+
+        &:hover .catalog-item__preview
+            border: 3px solid red
+            transition: 0.5s all ease
+
+        &:hover .catalog-item__title
+            display: block
+
+.nerf-gun
+
+    &-thumbnail
+        cursor: pointer
+        height: 63px
+        
+    &-lg
+        width: 150px
+        height: 150px
+        box-sizing: border-box
+        border-radius: 8px
+        border: 3px solid red
+
+.desc-header 
+    opacity: 0.1
+    text-transform: uppercase
+    margin: 0 auto
+    padding-top: 10px
 
